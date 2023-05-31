@@ -44,17 +44,18 @@
                         <p class="fs-5 fw-bold text-primary text-center">Fascia di età</p>
                     </div>
                     <div class="col">
-                        <input type="text" class="text-center w-100 border border-primary border-2" style="height: 40px;" id="InputNameSurname" placeholder="Nome e Cognome">
+                        <input type="text" class="text-center w-100 border border-primary border-2 rounded-2" style="height: 40px;" id="InputNameSurname" placeholder="Nome e Cognome">
                     </div>
                     <div class="col">
-                        <input type="number" class="text-center w-100 border border-primary border-2" style="height: 40px;" id="InputKm" placeholder="Inserisci i Km da percorrere">
+                        <input type="number" class="text-center w-100 border border-primary border-2 rounded-2" style="height: 40px;" min="10"
+                        step="1" id="InputKm" placeholder="Inserisci i Km da percorrere">
                     </div>
                     <div class="col">
-                        <select class="form-select w-100 border border-primary border-2" style="height: 40px;">
+                        <select class="form-select w-100 border border-primary border-2" style="height: 40px;" id="InputAge">
                             <option selected>Seleziona una fascia di età</option>
-                            <option value="1">Minorenne</option>
-                            <option value="2">Adulto</option>
-                            <option value="3">Over 65</option>
+                            <option value="">Minorenne</option>
+                            <option value="min">Adulto</option>
+                            <option value="over">Over 65</option>
                         </select>
                     </div>
                     </div>
@@ -63,8 +64,8 @@
                     <div class="container text-center button" id="button">
                         <div class="row justify-content-center mt-3">
                             <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg m-2">Genera</button>
-                                <button type="button" class="btn btn-outline-secondary btn-lg m-2">Annulla</button>
+                                <button type="button" class="btn btn-primary btn-lg m-2" id="confirm">Genera</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg m-2" id="reset">Annulla</button>
                             </div>
                         </div>
                     </div>
@@ -121,6 +122,6 @@
 </div>
 
 <!-- script javascript -->
-        <!-- <script src="js/script.js"></script>-->
+        <script src="js/script.js"></script>
     </body>
 </html>
