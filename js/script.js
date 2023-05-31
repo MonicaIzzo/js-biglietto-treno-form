@@ -11,7 +11,7 @@ console.log('JS OK')
     - SE l'età dell'utente è minore di 18 anni applico lo sconto young.
     - SE l'età dell'utente è maggiore di 65 anni applico lo sconto over.
     - SE l'utente non ha diritto a nessun effettuo nessun sconto e procedo al punto successivo.
-- 5 "Normalizzo" il risultato (solo 2 decimali)  
+- 5 Randomizzo Carrozza e code CP 
 - 6 Inserisco il risultato in pagina.
 */ 
 
@@ -38,7 +38,7 @@ const NameSurnameElements = document.getElementById ('NameSurname');
 const ticketElements = document.getElementById ('ticket');
 const cabElements = document.getElementById ('cab');
 const codeCPElements = document.getElementById ('codeCP');
-const princeElements = document.getElementById ('prince');
+const priceElements = document.getElementById ('price');
 
 // # 2 Aggancio un event listener al button
 BtnConfirm.addEventListener('click', function() {
@@ -51,7 +51,32 @@ if (!NameSurnameValue || isNuN(KmValue) || KmValue < 1) {
     alert('I dati inseriti non sono validi');
     return;
     };
+
+// # 4 Calcolo il prezzo del biglietto
+let price = KmValue * 0.21;
+let discount = 'Tariffa standard';
+
+// # 4a 4b Calcolo gli eventuali sconti
+if (AgeValue === 'min') {
+    price *= 0.8;
+    discount = 'yong';
+
+    }
+else if (AgeValue === 'over') {
+    price *= 0.6;
+    discount = 'over';
+}    
+
+// Carrozza
+const cab = Math.floor(Math.random() * 12 + 1);
+
+// codePC
+const codePC = Math.floor(Math.random(max 00000 - 99999) + 99999);
+
+
 })
+
+
 
 
 
