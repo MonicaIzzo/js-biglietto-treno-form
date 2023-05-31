@@ -2,70 +2,11 @@
     GENERAL STYLES
 ********************************************/
 
-
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Generics */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
 /* layout */
 
-div {
-    width: 60%;
+.main {
+    width: 80%;
     margin: 0 auto;
     padding: 20px;
 
-}
-p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.prince-discount{
-    background-color: lightblue;
-    padding: 20px;
-}
-.intro {
-    font-style: italic;
-    font-size: 24px;
-    padding: 20px;
-}
-.prince {
-    text-align: right;
-    padding: 20px;
-}
-
-.princeTXT {
-    text-decoration: line-through;
-    text-align: right;
-}
-
-
-.discount {
-    font-weight: 700;
-    text-align: right;
-    padding: 20px;
-}
-
-.total-prince {
-    font-weight: 700;
-    color: red;
-    font-size:20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #eeeeee;
-    padding: 10px 0;
-    text-align: right;
-    padding: 20px;
-}
-hr {
-    color: gray;
-    margin: 20px 0;
 }
