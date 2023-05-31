@@ -3,14 +3,17 @@ console.log('JS OK')
 /* 
 - 0 Recupero l'elemento da DOM
 - 1 Inizializzo tutte le variabili
-- 2 Chiedere all'utente tramite il prompt i km che vuole percorrere.
-- 3 Chiedere all'utente tramite il prompt la sua età.
-- 4 Calcolare il prezzo del biglietto al lordo degli sconti.
-- 5 Stabilire se l'utente ha diritto a sconti (young o over).
-    5a SE l'età dell'utente è minore di 18 anni applico lo sconto young.
-    5b SE l'età dell'utente è maggiore di 65 anni applico lo sconto over.
-- 6 "Normalizzare" il risultato (solo 2 decimali)  
-- 7 Stampare il risultato in pagina   
+- 2 Chiedo all'utente quanti km che vuole percorrere.
+- 3 Chiedo all'utente quanti anni ha.
+- 4 Verifico che i dati inseriti dall'utente
+    - SE NON CORRETTI: alert con messaggio ed esco dal programma
+    - SE CORRETTI: procedo al punto successivo
+- 5 Calcolo il prezzo del biglietto al lordo degli sconti.
+    - SE l'età dell'utente è minore di 18 anni applico lo sconto young.
+    - SE l'età dell'utente è maggiore di 65 anni applico lo sconto over.
+    - SE l'utente non ha diritto a nessun effettuo nessun sconto e procedo al punto successivo.
+- 6 "Normalizzo" il risultato (solo 2 decimali)  
+- 7 Inserisco il risultato in pagina.
 */ 
 
 
