@@ -7,9 +7,22 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori con massimo due decimali, per indicare centesimi sul prezzo. Questo richiederà un minimo di ricerca.
 
+
+MILESTONE 1:
+Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
+
+MILESTONE 2:
+Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form (non tag <form>) in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
+Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
+
+
 <br>
 <br>
 
+- **0**
+  - Preparare tutte le variabili che servono per eseguire il programma
+  - Predisporre l'HTML affinche interegisca con JS (settaggio id o/e classi)
+  - recuperare tutte gli elementi dal DOM che ci occorrono per l'esecuzione del programma.
 - **1**
   - Chiedere all'utente tramite il prompt i km che vuole percorrere.
    - salvare il dato in una variabile.
@@ -17,21 +30,28 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
   - Chiedere all'utente tramite il prompt la sua èta.
    - salvare il dato in una variabile.
 - **3**
+  - Verificare che i dati inseriti dall'utente sono corretti per l'esecuzione del programma
+  **SE NO**
+  Uscire dal flusso del programma ed invitare l'utente a riinserire i dati corretti.
+  **SE SI**
+  Procedere al punto successivo
+
+- **4**
   - Calcolare il prezzo del biglietto al lordo degli sconti.
    - salvare il dato in una variabile.
-- **4**
-  - Stabilire se l'utente ha diritto a sconti (young o over).
-
-- **4a**
-  - Applicare lo sconto young al prezzo lordo se richiesto.
-- **4b**  
-  - Applicare lo sconto over al prezzo lordo se richiesto. 
-
+- **SE**
+  - l'utente ha diritto a sconti (young o over)?
+      - **SE l'utente ha diritto allo sconto young**
+      - Applicare lo sconto young al prezzo lordo.
+      - **SE l'utente ha diritto allo sconto over**
+      - Applicare lo sconto over al prezzo lordo.
+      - **SE l'utente non ha diritto allo sconto**
+      - Non eseguire nessun calcolo e passare direttamente al punto successivo.
 - **5**
-  - "Normalizzare" il risultato (solo 2 decimali)  
-
+  - "Normalizzare" tramite il comendo JS .fixed il risultato (solo 2 decimali)  
 - **6**
-  - Stampare il risultato in pagina   
+  - Stampare il risultato in pagina 
+**FINE**  
 
 
 
