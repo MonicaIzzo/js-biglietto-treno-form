@@ -24,85 +24,80 @@ console.log('JS OK')
 // # 0, 1 Recupero gli emementi dal DOM e inizializzo tutte le variabili
 
 // FORM ELEMENTS
-const NameSurnameInput = document.getElementById ('NameSurname');
-const KmInput = document.getElementById ('Km');
-const AgeInput = document.getElementById ('Age');
-const ConfirmBtn = document.getElementById ('confirm');
-const ResetBtn = document.getElementById ('reset');
+const nameField = document.getElementById ('name');
+const kmsField = document.getElementById ('kms');
+const ageField = document.getElementById ('age');
+const confirmButton = document.getElementById ('confirm-button');
+const resetButton = document.getElementById ('reset-button');
 
 
 // TICKET ELEMENTS
-const ticketCardeElements = document.getElementById ('ticketCard');
-const PassengerElements = document.getElementById ('passenger');
-const ticketElements = document.getElementById ('ticket');
+const ticketSection = document.getElementById ('ticket-section');
+const passengerElements = document.getElementById ('passenger');
+const rateElements = document.getElementById ('rate');
 const cabElements = document.getElementById ('cab');
-const codeCPElements = document.getElementById ('codeCP');
+const pnrlements = document.getElementById ('pnr');
 const priceElements = document.getElementById ('price');
 
 
-const princePerKm = 0.21;
+const priceperKms = 0.21;
 const minDiscount = 0.8;
 const overDiscount = 0.6;
 
-console.log('princePerKm', 'minDiscount', 'overDiscount')
 
 // # 2 Aggancio un event listener al button
-ConfirmBtn.addEventListener('click', function() {
-    const NameSurnameValue = NameSurnameInput.value.trim();
-    const KmValue = parseInt(KmInput.value);
-    const AgeValue = AgeInput.value;
+confirmButton.addEventListener('click', function() {
+const nameValue = nameField.value.trim();
+const kmsValue = parseInt(kmsField.value);
+const ageValue = ageField.value;
 
-    console.log('NameSurnameValue', 'KmValue', 'AgeValue')
 
 // # 3 Validazione
-if (!NameSurnameValue || isNuN(KmValue) || KmValue < 1) {
+if (!nameValue || isNaN(kmsValue) || kmsValue < 1) {
     alert('I dati inseriti non sono validi');
     return;
-}
+}  
 
 // # 4 Calcolo il prezzo del biglietto
-let price = KmValue * 0.21;
-let discount = 'Tariffa standard';
+let price = kmsValue * priceperKms;
+let rateName= 'Tariffa Standard'
+
 
 // # 4a 4b Calcolo gli eventuali sconti
-if (AgeValue === 'min') {
-    price *= 0.8;
-    discount = 'Tariffa ridotta';
-
+if (ageValue === 'min') {
+    price *= minDiscount;
+    rateName = 'Tariffa ridotta';
 }
-else if (AgeValue === 'over') {
-    price *= 0.6;
-    discount = 'Tariffa ridotta';
-}    
+else if (ageValue === 'over') {
+    price *= overDiscount;
+    rateName = 'Tariffa ridotta';
+}  
 
 // Carrozza
-const cab = Math.floor(Math.random() * 12 + 1);
-
+const cab = Math.floor(Math.random() * 12) + 1;
 // codePC
-const codePC = Math.floor(Math.random * (00000 - 99999) + 99999);
+const pnr = Math.floor(Math.random() * (100000 - 90000) + 90000);
 
 
 // # 6 Inserisco il risultato in pagina.
-
-PassengerElements.innerText = NameSurnameValue;
-ticketElements.innerText = ticketValue;
+passengerElements.innerText = nameValue;
+rateElements.innerText = rateName;
 cabElements.innerText = cab;
-codeCPElements.innerText = codePC;
-priceElements.innerText = '€' + priceValue.toFixed(2);
+pnrlements.innerText = pnr;
+priceElements.innerText = '€' + price.toFixed(2);
 
+ticketSection.classList.remove('d-none')
 
-ticketElements.classList.remove('d-none')
 
 })
 
-ConfirmBtn.addEventListener('click', function() {
-});
 
-ResetBtn.addEventListener('click', function() {
-    NameSurnameInput.Value = '';
-    KmInput.Value = '';
-    AgeInput.Value = '';
-    ticketElements.classList.add('d-none');
+
+resetButton.addEventListener('click', function() {
+    nameField.Value = '';
+    kmsField.Value = '100';
+    ageField.Value = '';
+    ticketSection.classList.add('d-none');
 });
 
 
