@@ -27,8 +27,7 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
   **SE I DATI INSERITI SONO CORRETTI:**
   Procedo con l'esecuzione del programma al prossimo step.
 
-- **6**
-  - Calcolo il prezzo del biglietto al lordo degli sconti.
+- **6** Calcolo il prezzo del biglietto al lordo degli sconti.
   - Memorizzo il dato in una variabile di comodo.
 - **SE L'UTENTE HA DIRITTO A UNO SCONTO PROCEDO CON IL CALCOLO DELLO STESSO**
   - **SE l'utente ha diritto allo sconto young**
@@ -37,8 +36,6 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
   - Applico lo sconto over al prezzo lordo.
   - **SE l'utente non ha diritto allo sconto**
   - Non eseguo nessun calcolo e passo direttamente allo step successivo.
-- **7**
-  - "Normalizzo il prezzo" tramite il comendo JS .fixed
-- **7**
-  - Stampo il risultato in pagina
-    **FINE**
+- **7** "Normalizzo il prezzo" tramite il comendo JS .fixed
+- **8** Stampo il risultato in pagina
+  **FINE**
